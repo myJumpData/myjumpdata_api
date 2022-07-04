@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es6",
     "lib": ["es6"],
     "module": "commonjs",
     "rootDir": "src",
@@ -10,6 +10,11 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "noImplicitAny": false,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+
+    "outDir": "dist",
+  },
+  "exclude": ["node_modules","ecosystem.config.js"],
+  "include": ["**/*.ts"]
 }
