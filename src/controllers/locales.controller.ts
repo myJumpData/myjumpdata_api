@@ -42,18 +42,25 @@ export const addLocales = (req, res) => {
   }).exec((_, d) => {
     if (d.length <= 0) {
       TranslationMissing.find({
-        key: req.body.key,
         namespace: req.body.ns,
-      }).exec((_, data) => {
-        if (data.length <= 0) {
-          const t = new TranslationMissing({
+        key: req.body.key,
+      }).exec((_, d2) => {
+        if (d2.length <= 0) {
+          TranslationMissing.find({
             key: req.body.key,
             namespace: req.body.ns,
+          }).exec((_, data) => {
+            if (data.length <= 0) {
+              const t = new TranslationMissing({
+                key: req.body.key,
+                namespace: req.body.ns,
+              });
+              t.save((t) => {
+                console.log(t);
+              });
+              return res.status(200).send({});
+            }
           });
-          t.save((t) => {
-            console.log(t);
-          });
-          return res.status(200).send({});
         }
       });
     }
