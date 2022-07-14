@@ -1,5 +1,5 @@
-import { MongoTools } from "node-mongotools";
-import { CONNECT_STRING_DEFAULT, ENV_DATA } from "./src/consts/db";
+const { MongoTools } = require("node-mongotools");
+const { CONNECT_STRING_DEFAULT, ENV_DATA } = require("./src/consts/db");
 
 const mongoTools = new MongoTools();
 const mtOptions = {
