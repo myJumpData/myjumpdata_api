@@ -1,4 +1,6 @@
 const { MongoTools } = require("node-mongotools");
+require("dotenv");
+
 const ENV_DATA = {
   DB_USER: process.env["DB_USER"],
   DB_PSWD: process.env["DB_PSWD"],
