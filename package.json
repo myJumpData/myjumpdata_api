@@ -9,7 +9,8 @@
     "postbuild": "pm2 restart myJumpData_API --update-env",
     "pm2status": "pm2 status",
     "pm2start": "pm2 start ./ecosystem.config.js",
-    "pm2logs": "pm2 logs"
+    "pm2logs": "pm2 logs",
+    "translation": "ts-node backup.ts"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "express-fileupload": "^1.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.0",
+    "node-mongotools": "^2.0.2",
     "nodemailer": "^6.7.5",
     "socket.io": "^4.5.1"
   }

@@ -12,6 +12,7 @@ export async function getFreestyle(req, res) {
     pathSplit = path.split("_").filter((e: string) => e);
   }
   await process(pathSplit[0], pathSplit[0]);
+
   async function process(key, name) {
     let id: any = null;
     if (key) {
@@ -62,6 +63,7 @@ export async function getFreestyle(req, res) {
     }
   }
 }
+
 export function saveFreestyleDataOwn(req, res) {
   FreestyleDataUser.find({ user: req.userId, element: req.body.element }).exec(
     (err, response) => {
@@ -98,6 +100,7 @@ export function saveFreestyleDataOwn(req, res) {
     }
   );
 }
+
 export function getUserFreestyle(req, res) {
   FreestyleDataUser.find({
     user: { $in: req.body?.user },
@@ -113,6 +116,7 @@ export function getUserFreestyle(req, res) {
       return requestHandler(res, 200, "", "", data);
     });
 }
+
 export function saveFreestyleData(req, res) {
   FreestyleDataUser.find({
     user: req.params.id,
