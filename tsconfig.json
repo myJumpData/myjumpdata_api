@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es6"],
+    "lib": [
+      "es6"
+    ],
     "module": "commonjs",
     "rootDir": "src",
     "resolveJsonModule": true,
@@ -12,9 +14,14 @@
     "noImplicitAny": false,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-
-    "outDir": "dist",
+    "outDir": "dist"
   },
-  "exclude": ["node_modules","ecosystem.config.js"],
-  "include": ["**/*.ts"]
+  "exclude": [
+    "node_modules",
+    "ecosystem.config.js",
+    "backup.ts"
+  ],
+  "include": [
+    "**/*.ts"
+  ]
 }
