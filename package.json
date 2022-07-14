@@ -10,7 +10,7 @@
     "pm2status": "pm2 status",
     "pm2start": "pm2 start ./ecosystem.config.js",
     "pm2logs": "pm2 logs",
-    "translation": "node backup.js"
+    "backup": "node backup.js"
   },
   "keywords": [],
   "author": "",
