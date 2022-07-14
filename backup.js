@@ -1,6 +1,6 @@
 const { MongoTools } = require("node-mongotools");
 const path = require("path");
-require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+require("dotenv").config({ path: path.resolve(__dirname, "./.env") });
 
 const ENV_DATA = {
   DB_USER: process.env["DB_USER"],
