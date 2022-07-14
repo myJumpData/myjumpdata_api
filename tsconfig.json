@@ -19,7 +19,7 @@
   "exclude": [
     "node_modules",
     "ecosystem.config.js",
-    "backup.ts"
+    "backup.js"
   ],
   "include": [
     "**/*.ts"
